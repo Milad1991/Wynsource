@@ -1,5 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  #before_action :not_logged_in, only: [:new]
+  before_action :authenticate_user! , except: [:index, :show]
 
   # GET /resources
   # GET /resources.json
@@ -16,6 +18,7 @@ class ResourcesController < ApplicationController
   # GET /resources/new
   def new
     @resource = Resource.new
+    @resource = current_user.resources.build
   end
 
   # GET /resources/1/edit
@@ -26,6 +29,7 @@ class ResourcesController < ApplicationController
   # POST /resources.json
   def create
     @resource = Resource.new(resource_params)
+    @resource = current_user.resources.build(resource_params)
 
     respond_to do |format|
       if @resource.save
@@ -63,6 +67,11 @@ class ResourcesController < ApplicationController
   end
 
   private
+    def not_logged_in
+      if not current_user
+        redirect_to root_path
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_resource
       @resource = Resource.find(params[:id])

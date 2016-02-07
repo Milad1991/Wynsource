@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <strong>Name:</strong>
   <%= @resource.name %>
@@ -20,10 +22,15 @@
   <div>
     <%= time_ago_in_words review.created_at %> ago
   </div>
+
 <% end %>
 
+
+
 <h3>New Review</h3>
+
 <%= render 'reviews/form' %>
+
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>
