@@ -15,11 +15,18 @@
 
   <thead>
     <tr>
+<<<<<<< HEAD
 
       <!-- <th>Name</th>
       <th>Description</th>
       <th colspan="3"></th> -->
 
+=======
+      <th>Resource</th>
+      <th>Description</th>
+      <th>Collaborator</th>
+      <th colspan="3"></th>
+>>>>>>> 306ee41c9ae01cf728ff9673148fe4d6c2d65f03
     </tr>
   </thead>
 
@@ -31,9 +38,17 @@
       <tr>
         <td><%= resource.name %></td>
         <td><%= resource.description %></td>
+        <td><%= resource.user.email %></td>
         <td><%= link_to 'Show', resource %></td>
+<<<<<<< HEAD
         <!-- <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
         <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+=======
+        <% if resource.user == current_user %>
+        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <% end %>
+>>>>>>> 306ee41c9ae01cf728ff9673148fe4d6c2d65f03
       </tr>
     <% end %>
   </tbody>

@@ -1,7 +1,12 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+<<<<<<< HEAD
 <div class="title">
+=======
+
+
+>>>>>>> 306ee41c9ae01cf728ff9673148fe4d6c2d65f03
 <p>
   <strong>Name:</strong>
   <%= @resource.name %>
@@ -22,12 +27,19 @@
   <div>
     <%= time_ago_in_words review.created_at %> ago
   </div>
+
 <% end %>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 306ee41c9ae01cf728ff9673148fe4d6c2d65f03
 <h3>New Review</h3>
+
 <%= render 'reviews/form' %>
 
+<<<<<<< HEAD
 <br>
 <br>
 <%= link_to edit_resource_path(@resource) do %>
@@ -41,3 +53,8 @@
 
 </div>
 </div>
+=======
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>
+>>>>>>> 306ee41c9ae01cf728ff9673148fe4d6c2d65f03
