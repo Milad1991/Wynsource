@@ -2,3 +2,23 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+/*html,body {
+  font-family: 'Rajdhani';
+  font-weight: bold;
+  padding: 1em 2em;
+  font-size: 18px;
+  background: #222;
+  color: #aaa
+}
+
+h1,h2 {
+  text-align: center;
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}*/

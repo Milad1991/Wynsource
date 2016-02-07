@@ -1,6 +1,20 @@
+<div class="container">
+
+<div class="edit">
 <h1>Editing Resource</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @resource %> |
-<%= link_to 'Back', resources_path %>
+<br>
+<br>
+<%= link_to @resource do %>
+<i class="fa fa-search-plus fa-3x"> Show</i>
+<% end %>
+
+<%= link_to resources_path do %>
+<i class="fa fa-backward fa-3x"> Back</i>
+<% end %>
+
+
+</div>
+</div>
